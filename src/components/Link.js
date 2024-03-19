@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import NavigationContext from '../context/navigation';
 
 function Link({to, children}){
-    const { navigate, currentPath } = useContext(NavigationContext);
+    const { navigate } = useContext(NavigationContext);
     const handleClick= (event) => {
         if (event.metaKey || event.ctrlKey) {
             return;
