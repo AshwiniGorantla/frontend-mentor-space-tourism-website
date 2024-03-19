@@ -2,10 +2,10 @@ import Link from './Link'
 
 function Topbar () {
     const topBarList = [
-        {label:"00 Home", path:"/home"},
-        {label:"01 Destination", path:"/destination"},
-        {label:"02 Crew", path:"/crew"},
-        {label:"03 Technology", path:"/technology"}
+        {label:"00 HOME", path:"/home"},
+        {label:"01 DESTINATION", path:"/destination"},
+        {label:"02 CREW", path:"/crew"},
+        {label:"03 TECHNOLOGY", path:"/technology"}
     ];
 
     const topBarLinks = topBarList.map((item)=>{

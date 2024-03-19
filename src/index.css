@@ -1,23 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;700");
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@100;400&display=swap");
 
 :root {
     --font-outfit: "Outfit";
     --font-YS: "Young+Serif";
     --font-size: 1em;
+    --font-Liv: "Livvic"
 }
-
 
 body, html, #root {
     height: 100%;
+    color: white;
+    font-family: var(--font-Liv);
 }
 
 .main{
-    background-image: url('./images/home/background-home-desktop.jpg');
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
+
+.banner {
+    display: inline;
+}
+
+hr{
+    width: 35%;
+    margin: 0;
+    left: 11%;
+    top: 3.5em;
+    position: relative;
+    height: 1.5px;
+    background-color: #675c5c;
+    border: none;
+    z-index: 1;
+}
+
+.line {
+    width: 35%;
+    left: 11%;
+    top: 3.5em;
+    position: relative;
+    height: 1.5px;
+    background-color: #675c5c;
+    z-index: 1;
+  }
+
+p{
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    top: 5.5em;
+    left: 5%;
+}
+
 .main-topbar {
     width: 50%;
     float: right;
@@ -36,8 +79,90 @@ body, html, #root {
     width: 50%;
     float: right;
     height: 5em;
-    top:3em;
     color: white;
     font-family: var(--font-outfit);
-    background: linear-gradient(to right, #303056, lightblue, #5656a1, lightblue);
+    background: linear-gradient(to right, #1b1b31, lightblue, #5656a1, lightblue);
 }
+
+a {
+    text-decoration: none;
+}
+
+.home {
+    position: absolute;
+    top: 50%;
+}
+
+.home-grid, .planet-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.home-text {
+    margin-left: 20%;
+}
+
+.explore {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    bottom: 0;
+    right: 170px;
+}
+
+.destination {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.destination-title {
+    padding-left: 10%;
+    padding-bottom: 5%;
+    font-size: 30px;
+}
+
+.planets-list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    float: right;
+    width: 25%;
+    right: 18%;
+}
+
+.planet {
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+}
+
+.planet-img {
+    padding-left: 25%;
+}
+
+.planet-overview {
+    padding: 40px 130px 0 130px;
+}
+
+.overview-footer {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 76px;
+}
+
+.overview-line {
+    top: 3.5em;
+    position: relative;
+    height: 1.5px;
+    background-color: #434040;
+    z-index: 1;
+  }
