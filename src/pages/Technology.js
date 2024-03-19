@@ -1,10 +1,15 @@
-import Topbar from "../components/Topbar";
+import { useEffect } from "react";
+import backgroundimage from '../images/technology/background-technology-desktop.jpg'
 
 function Technology () {
+    useEffect(()=>{
+        let mainDiv = document.getElementsByClassName('main')[0];
+        mainDiv.style.backgroundImage = `url(${backgroundimage})`;
+    }, [])
     return (
     <div>
-        <Topbar />
-        Technology page</div>);
+        Technology page
+    </div>);
 }
 
 export default Technology;
