@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;700");
 @import url("https://fonts.googleapis.com/css2?family=Livvic:wght@100;400&display=swap");
 
 :root {
     --font-outfit: "Outfit";
-    --font-YS: "Young+Serif";
     --font-size: 1em;
     --font-Liv: "Livvic"
 }
@@ -15,18 +13,32 @@ body, html, #root {
     font-family: var(--font-Liv);
 }
 
-.main{
+.main {
     overflow: hidden;
     background-size: cover;
     width: 100%;
     height: 100vh;
+    background-image: url('./images/home/background-home-desktop.jpg');
+    color: white;
+}
+
+.destination-background {
+    background-image: url('./images/destination/background-destination-desktop.jpg');
+}
+
+.crew-background {
+    background-image: url('./images/crew/background-crew-desktop.jpg');
+}
+
+.technology-background {
+    background-image: url('./images/technology/background-technology-desktop.jpg');
 }
 
 .banner {
     display: inline;
 }
 
-hr{
+hr {
     width: 35%;
     margin: 0;
     left: 11%;
@@ -46,9 +58,9 @@ hr{
     height: 1.5px;
     background-color: #675c5c;
     z-index: 1;
-  }
+}
 
-p{
+p {
     margin: 0;
 }
 
@@ -69,7 +81,7 @@ p{
     position: relative;
 }
 
-.topBar{
+.topBar {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -84,8 +96,19 @@ p{
     background: linear-gradient(to right, #1b1b31, lightblue, #5656a1, lightblue);
 }
 
+.destinationShades {
+    background: linear-gradient(to right, rgb(26 28 29), #262628)
+}
+.crewShades {
+    background: linear-gradient(to right, #39393b, rgb(30, 31, 32), #39393b);
+}
+.technologyShades {
+    background:  rgb(20 32 43);;
+}
+
 a {
     text-decoration: none;
+    color: white;
 }
 
 .home {
@@ -93,13 +116,13 @@ a {
     top: 50%;
 }
 
-.home-grid, .planet-details{
+.content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
 }
 
-.home-text {
+.content-text {
     margin-left: 20%;
 }
 
@@ -115,16 +138,16 @@ a {
     right: 170px;
 }
 
-.destination {
+.destination, .crew, .technology {
     position: absolute;
     top: 30%;
     width: 100%;
 }
 
-.destination-title {
+.title {
     padding-left: 10%;
-    padding-bottom: 5%;
     font-size: 30px;
+    text-transform: uppercase;
 }
 
 .planets-list {
@@ -134,6 +157,7 @@ a {
     float: right;
     width: 25%;
     right: 18%;
+    padding-top: 5%;
 }
 
 .planet {
@@ -144,8 +168,12 @@ a {
     }
 }
 
-.planet-img {
+.planet-img, .crew-img {
     padding-left: 25%;
+}
+
+.crew-img {
+    height: 620px;
 }
 
 .planet-overview {
@@ -165,4 +193,60 @@ a {
     height: 1.5px;
     background-color: #434040;
     z-index: 1;
-  }
+}
+
+.crew-selector {
+    width: 10%;
+    position: absolute;
+    bottom: 3em;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.dots{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    padding: 5px;    
+    background-color: gray;
+    border-radius: 50%; 
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+    }
+}
+
+.technology-selector {
+    top:30%;
+    left: 11em;
+    position: absolute;
+
+}
+
+.numberCircle {
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    border: 2px solid #666;
+    margin: 10px;
+    justify-content: center;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color:black;
+    }
+}
+
+.tech-img {
+    float: right;
+    right: 1em;
+    position: absolute;
+}
+
+.tech-content-text {
+    margin-left: 40%;
+    padding-top: 8%;
+}

@@ -1,15 +1,21 @@
-import { useEffect } from "react";
-import backgroundimage from '../images/technology/background-technology-desktop.jpg'
+import { useState } from "react";
+import TechnologyDetails from '../components/TechnologyDetails';
+import data from '../data/data.json';
 
 function Technology () {
-    useEffect(()=>{
-        let mainDiv = document.getElementsByClassName('main')[0];
-        mainDiv.style.backgroundImage = `url(${backgroundimage})`;
-    }, [])
+    const [index, setIndex] = useState(0);
+
     return (
-    <div>
-        Technology page
-    </div>);
+        <div className="technology">
+            <div className="title"> 03 space launch 101 </div>
+            <div className="technology-selector">
+                <div className="numberCircle" onClick={()=> {setIndex(0)}}>1</div>
+                <div className="numberCircle" onClick={()=> {setIndex(1)}}>2</div>
+                <div className="numberCircle" onClick={()=> {setIndex(2)}}>3</div>
+            </div>
+            <TechnologyDetails index={index} data={data.technology} />
+        </div>
+    );
 }
 
 export default Technology;
