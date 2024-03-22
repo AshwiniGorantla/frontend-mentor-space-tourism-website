@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
-import backgroundimage from '../images/destination/background-destination-desktop.jpg'
+import { useState } from "react";
 import DestinationDetails from '../components/DestinationDetails'
 import data from '../data/data.json'
 
 function Destination () {
     const [index, setIndex] = useState(0);
-    useEffect(()=>{
-        let mainDiv = document.getElementsByClassName('main')[0];
-        mainDiv.style.backgroundImage = `url(${backgroundimage})`;
-    }, [])
-
     const DestinationList = ['MOON', 'MARS', 'EUROPA', 'TITAN']
 
     return (
         <div className="destination">
-            <div className="destination-title"> 01 PICK YOUR DESTINATION </div>
+            <div className="title"> 01 Pick your destination</div>
             <div className="planets-list">
                 {DestinationList.map((dest, index) => (
                 <span className="planet" key={index} onClick={()=>{setIndex(index);}}> 
