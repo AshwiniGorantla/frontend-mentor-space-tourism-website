@@ -214,10 +214,13 @@ a {
     width: 5px;
     height: 5px;
     padding: 5px;    
-    background-color: gray;
+    background-color: rgb(81, 66, 66);;
     border-radius: 50%; 
     &:hover{
         cursor: pointer;
+        background-color: gray;
+    }
+    &[aria-selected="true"]{
         background-color: white;
     }
 }
@@ -241,6 +244,10 @@ a {
     justify-content: center;
     &:hover{
         cursor: pointer;
+        background-color: gray;
+        color:black;
+    }
+    &[aria-selected="true"]{
         background-color: white;
         color:black;
     }
